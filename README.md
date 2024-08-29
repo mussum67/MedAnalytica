@@ -29,10 +29,6 @@ The Healthcare Information Management System is designed to streamline healthcar
 
 - **MySQL**: The relational database used to store and manage healthcare data securely.
 
-## System Architecture
-
-The system is built on a multi-tier architecture with separate layers for presentation, business logic, and data storage. This approach ensures scalability, maintainability, and security.
-
 ## Conclusion
 
 This Healthcare Information Management System is a comprehensive solution for modern healthcare providers, offering enhanced efficiency and accuracy through the integration of advanced AI and predictive analytics features.
