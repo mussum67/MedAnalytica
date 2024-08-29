@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+		"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<!-- Package Definition -->
+	<package name="productManagementApp" extends="struts-default">
+
+		<!-- Define Interceptor -->
+		<interceptors>
+			<interceptor name="loginInterceptor" class="it.unicas.Login.interceptor.LoginInterceptor"/>
+			<interceptor-stack name="authStack">
+				<interceptor-ref name="loginInterceptor"/>
+				<interceptor-ref name="defaultStack"/> <!-- Default interceptors stack -->
+			</interceptor-stack>
+		</interceptors>
+
+		<!-- Apply the interceptor to relevant actions -->
+		<default-interceptor-ref name="authStack"/>
+
+		<!-- Main Login Selection -->
+		<action name="chooseLogin">
+			<result name="success" type="redirectAction">
+				<param name="namespace">/login</param>
+				<param name="actionName">${#parameters.loginType[0]}Login</param>
+			</result>
+		</action>
+
+		<!-- Doctor Login -->
+		<action name="doctorLoginAction" class="it.unicas.Login.action.DoctorLoginAction">
+			<interceptor-ref name="defaultStack"/> <!-- No auth check on login -->
+			<result name="doctorSuccess">/doctorHome.jsp</result>
+			<result name="input">/doctor_login.jsp</result>
+		</action>
+
+		<!-- Patient Login -->
+		<action name="patientLoginAction" class="it.unicas.Login.action.PatientLoginAction">
+			<interceptor-ref name="defaultStack"/> <!-- No auth check on login -->
+			<result name="patientSuccess">/patientHome.jsp</result>
+			<result name="input">/patient_login.jsp</result>
+		</action>
+
+		<!-- Logout Action -->
+		<action name="logoutAction" class="it.unicas.Login.action.LogoutAction">
+			<result name="success" type="redirect">/login.jsp</result> <!-- Redirect to the main login page -->
+		</action>
+
+		<action name="uploadAction" class="it.unicas.Upload.action.UploadAction">
+			<result name="success">/patientHome.jsp</result>
+			<result name="input">/upload.jsp</result>
+			<result name="error">/upload.jsp</result>
+		</action>
+
+
+		<!-- Doctor Registration -->
+		<action name="registerDoctor" class="it.unicas.doctor.action.DoctorRegAction">
+			<interceptor-ref name="defaultStack"/> <!-- No auth check on registration -->
+			<result name="success">/success.jsp</result> <!-- Define the path to the success page -->
+			<result name="input">/doctor_reg.jsp</result> <!-- Define the path to the registration form -->
+		</action>
+
+		<!-- Patient Registration -->
+		<action name="registerPatient" class="it.unicas.patient.action.PatientRegAction">
+			<interceptor-ref name="defaultStack"/> <!-- No auth check on registration -->
+			<result name="success">/success.jsp</result> <!-- Define the path to the success page -->
+			<result name="input">/patient_reg.jsp</result> <!-- Define the path to the registration form -->
+		</action>
+
+		<!-- Configuration for DoctorFilesAction -->
+		<action name="patientFiles" class="it.unicas.Upload.action.DoctorFilesAction">
+			<result name="success">/doctorViewFiles.jsp</result>
+			<result name="login">/login.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="downloadFile" class="it.unicas.Upload.action.DownloadFileAction">
+			<result name="success" type="stream">
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="contentDisposition">attachment;filename="${fileName}"</param>
+				<param name="bufferSize">1024</param>
+			</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="viewPatientDetails" class="it.unicas.Upload.action.ViewPatientDetailsAction">
+			<result name="success">/viewPatientDetails.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="doctorMessages" class="it.unicas.message.action.DoctorMessagesAction">
+			<result name="success">/doctorMessages.jsp</result>
+			<result name="login">/login.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="sendMessageAction" class="it.unicas.message.action.SendMessageAction">
+			<result name="success" type="redirectAction">doctorMessages</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="patientMessages" class="it.unicas.message.action.ViewMessagesAction">
+			<result name="success">/patientMessages.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+	</package>
+</struts>
