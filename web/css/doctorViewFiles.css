@@ -1,0 +1,55 @@
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: #218d50;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+.file-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.file-table thead tr {
+    background-color: #79e1ad;
+    color: #0c1106;
+}
+
+.file-table th, .file-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.file-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #79e1ad;
+    color: #0c1106;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

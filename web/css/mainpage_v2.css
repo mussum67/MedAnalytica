@@ -1,0 +1,406 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #0c1106;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-radius: 10px; /* Keeps rounded corners */
+    margin: 0; /* Ensure no margin */
+}
+
+
+.navigation img {
+    width: 80px;
+    height: auto;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #0c1106;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #218d50; /* Changed hover color */
+}
+.nav-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.nav-login-btn, .nav-register-btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #218d50; /* Changed background color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-login-btn:hover, .nav-register-btn:hover {
+    background-color: #19573b; /* Darker green for hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 30px;
+    background-color: #e6f7ec; /* Light green background */
+    height: 100vh;
+    border-radius: 10px; /* Added rounded corners */
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #218d50; /* Changed text color */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-text-btns a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #218d50; /* Changed button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-text-btns a:hover {
+    background-color: #19573b; /* Darker green for hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.hero-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Added rounded corners */
+}
+
+/* What We Provide Section */
+.what-we-provide {
+    padding: 60px 30px;
+    background-color: #f1f1f1;
+}
+
+.w-info-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.w-info-box:hover {
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.w-info-icon {
+    font-size: 2.5rem;
+    color: #218d50; /* Changed icon color */
+    margin-bottom: 15px;
+}
+
+.w-info-text strong {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.w-info-text p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Services Section */
+.services-area {
+    padding: 60px 30px;
+    background-color: #ffffff;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    color: #218d50; /* Changed text color */
+}
+
+.section-title p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.single-service {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.single-service:hover {
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: #218d50; /* Changed icon color */
+    margin-bottom: 15px;
+}
+
+.service-content h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* About Section */
+.about-area {
+    padding: 60px 30px;
+    background-color: #e6ffe6;/* Updated to light green */
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    color: #218d50; /* Changed text color */
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.about-content .btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #218d50; /* Changed button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-content .btn:hover {
+    background-color: #19573b; /* Darker green for hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 30px;
+    background-color: #ffffff;
+}
+
+.contact-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    color: #218d50; /* Changed icon color */
+    margin-bottom: 15px;
+}
+
+.contact-content h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-content p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #79e1ad; /* Updated background color */
+    color: #0c1106;
+    padding: 20px 30px;
+    text-align: center;
+    border-radius: 10px; /* Added rounded corners */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+footer ul.social {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer ul.social li {
+    display: inline-block;
+}
+
+footer ul.social li a {
+    color: #0c1106;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer ul.social li a:hover {
+    color: #218d50; /* Changed hover color */
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #218d50; /* Changed button color */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-top:hover {
+    background-color: #19573b; /* Darker green for hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        margin-bottom: 30px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .what-we-provide, .services-area, .about-area, .contact-section {
+        padding: 30px 15px;
+    }
+}
+/* Existing styles in mainpage_v2.css */
+/* ... */
+
+/* Custom Bootstrap Overrides */
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #218d50 !important;
+    border-color: #218d50 !important;
+    color: #fff !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #218d50;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+    color: #19573b;
+}
+
+.navbar-light .navbar-brand {
+    color: #218d50;
+}
+
+/* Custom Line Icons Customization */
+.lni {
+    color: #218d50; /* Changed default icon color */
+}
+
+.lni:hover {
+    color: #19573b; /* Darker green on hover */
+}

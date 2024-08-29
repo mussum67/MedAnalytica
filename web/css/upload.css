@@ -1,0 +1,92 @@
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: #ffffff;
+    padding: 60px;
+}
+
+.logo {
+    width: 500px; /* Adjust the size to fit better */
+    margin-bottom: 20px;
+}
+
+.login-form {
+    width: 100%; /* Ensure the form fits well within its container */
+    max-width: 300px;
+}
+
+.login-form input, .login-form select {
+    width: 100%;
+    padding: 10px; /* Adjust padding for better spacing */
+    margin: 10px 0;
+    border: 1px solid #000000;
+    border-radius: 10px; /* Reduced border-radius for a cleaner look */
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-form button:hover {
+    background-color: #0056b3;
+}
+
+.login-form a {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.right {
+    width: 20%; /* Correct width percentage to fit within the container */
+    background: url('../assets/images/IA_Salut.jpeg') no-repeat center center;
+    background-size: cover;
+}
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer a {
+    color: #000000;
+    text-decoration: none;
+}

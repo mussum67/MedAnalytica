@@ -1,0 +1,61 @@
+/* patientDetails.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #0c1106;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.details-table th, .details-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.details-table th {
+    background-color: #79e1ad;
+    color: #0c1106;
+    text-transform: uppercase;
+}
+
+.details-table td {
+    border-bottom: 1px solid #ddd;
+    background-color: #f8f9fa;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #79e1ad;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
